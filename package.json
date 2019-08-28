@@ -1,0 +1,22 @@
+{
+  "name": "gooey-bot",
+  "version": "0.1.0",
+  "description": "Geoduck Discord Bot",
+  "main": "bot.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nastycoder/gooey-bot.git"
+  },
+  "author": "nastycoder",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nastycoder/gooey-bot/issues"
+  },
+  "homepage": "https://github.com/nastycoder/gooey-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
