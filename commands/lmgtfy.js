@@ -22,7 +22,7 @@ function lmgtfy(msg, context) {
     reply = send(msg)
   }
 
-  return reply.then(context.delete).catch(e => {
+  return reply.then( () => context.delete()).catch(e => {
     console.error(`lmgtfy`, context.toString(), e);
   });
 };
