@@ -1,12 +1,30 @@
 const baseUrl = 'https://www.lmgtfy.com/?q=';
 
 function lmgtfy(msg, context) {
-  // make sure we escape any weird shit the user put into this query.
-  const q = encodeURIComponent(msg.join(' ')); 
-  context.channel.send(`<${baseUrl}${q}>`);
-  if (context.deletable) {
-    context.delete();
+  let reply;
+
+  function send(query) {
+    // make sure we escape any weird shit the user put into this query.
+    const q = encodeURIComponent(query.join(' ')); 
+    return context.channel.send(`<${baseUrl}${q}>`);
   }
+
+  // if they didn't provide a message, assume they are trolling whoever posted just before them.
+  if (!msg.length) {
+    reply = context.channel.fetchMessages({ 
+      limit: 1, before: context.id 
+    }).then( messages => {
+      // mapping here just in case messages is an empty array but the 
+      // length never be more than one.
+      messages.map(m => send([m.content]));
+    });
+  } else {
+    reply = send(msg)
+  }
+
+  return reply.then(context.delete).catch(e => {
+    console.error(`lmgtfy`, context.toString(), e);
+  });
 };
 
 exports.run = lmgtfy;
