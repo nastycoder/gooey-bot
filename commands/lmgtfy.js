@@ -7,7 +7,9 @@ function lmgtfy(msg, context) {
     query = query.join(' ');
     // make sure we escape any weird shit the user put into this query.
     const q = encodeURIComponent(query); 
-    return context.channel.send(`[${query}](${baseUrl}${q})`);
+    return context.channel.send(query, {
+      embed: `${baseUrl}${q}`
+    });
   }
 
   // if they didn't provide a message, assume they are trolling whoever posted just before them.
