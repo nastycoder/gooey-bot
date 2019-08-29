@@ -9,7 +9,8 @@ function lmgtfy(msg, context) {
     const q = encodeURIComponent(query); 
     return context.channel.send('Here to help!', {
       embed: {
-        title: `[${query}](${baseUrl}${q})`,
+        title: query,
+        url: `${baseUrl}${q}`
       }
     });
   }
