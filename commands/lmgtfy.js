@@ -8,7 +8,9 @@ function lmgtfy(msg, context) {
     // make sure we escape any weird shit the user put into this query.
     const q = encodeURIComponent(query); 
     return context.channel.send(query, {
-      embed: `${baseUrl}${q}`
+      embed: {
+        url: `${baseUrl}${q}`
+      }
     });
   }
 
