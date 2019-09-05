@@ -13,7 +13,7 @@ bot.on('message', context => {
     return;
   }
   
-  const msg = message.substr(prefix.length).trim().split(' ');
+  const msg = message.replace(prefix, '').trim().split(' ');
   const com = msg.shift();
 
   if (!!commands[com]) {

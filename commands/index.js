@@ -9,8 +9,11 @@
 
 
 const commands = [
+  require('./clean'),
   require('./ping'),
-  require('./lmgtfy')
+  require('./lmgtfy'),
+  require('./kill'),
+  require('./show')
 ];
 
 module.exports = commands.reduce((all, cur) => {
