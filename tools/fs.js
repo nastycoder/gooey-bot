@@ -26,6 +26,15 @@ class fs {
       })
     });
   }
+
+  async unlink(filename) {
+    return new Promise( (res, rej) => {
+      ogfs.unlink(filename, ( _ ) => {
+        // if this fails we don't care
+        res(true);
+      })
+    })
+  }
 }
 
 module.exports = new fs();

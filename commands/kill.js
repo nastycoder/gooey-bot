@@ -42,7 +42,7 @@ async function kill(_, context){
       `Death Totals`, 
       Object.keys(stored).reduce( (acc, cur) => {
         const data = stored[cur];
-        return `${acc}${data.username} : ${data.deaths}\n`
+        return `${acc}${data.name} : ${data.deaths}\n`
       }, '')
     );
     // Send a reply after everything else is done
