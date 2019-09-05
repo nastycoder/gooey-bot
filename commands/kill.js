@@ -27,18 +27,12 @@ function kill(msg, context){
   }
   
   // Try to open the memory file, if it fails assume that the file is fucked and start over
-  file.readFile(filename, (error, data){
-    if (!error){
-      try {
-        appendDeaths(JSON.parse(data));
-      } catch (error) {
-        appendDeaths({});
-      }
-    } else {
-      appendDeaths({});
-    }
+  file.readFile(filename).then((data){
+    appendDeaths(JSON.parse(data));
+  }).catch((){
+    appendDeaths({});
   });
-  
+
 };
 
 exports.run = kill;
