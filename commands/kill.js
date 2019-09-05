@@ -13,7 +13,7 @@ function kill(msg, context){
   
   // Send a reply after everything else is done
   function doReply() {
-    send('You got it!');
+    context.channel.send('You got it!');
   };
   
   // Increment the death counter for all mentioned members
