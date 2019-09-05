@@ -1,16 +1,16 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const commands = require('./commands');
-const prefix = ''; // removed the prefix for now
+const prefix = bot.user.toString(); // Use @gooey mentions as the prefix
 
 bot.on('message', context => {
   const message = context.content.toLowerCase();
-
+  
   // If they aren't talking to us, just bail.
   if (!message.startsWith(prefix)) {
     return;
   }
-
+  
   const msg = message.split(' ');
   const com = msg.shift().replace(prefix, '');
 
