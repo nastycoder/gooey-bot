@@ -1,4 +1,4 @@
-const file = require('fs');
+const file = require('fs').promises;
 const filename = '../memory/deaths.json';
 
 function kill(msg, context){
@@ -20,10 +20,12 @@ function kill(msg, context){
       }
     });
     // Write to memory and send a reply when finished
-    file.writeFile(filename, JSON.stringify(memory), (error) {
+    file.writeFile(filename, JSON.stringify(memory)).then((){
       // Send a reply after everything else is done
       context.channel.send('You got it!');
-    })
+    }).catch((){
+      context.channel.send('Something went wrong boss.');
+    });
   }
   
   // Try to open the memory file, if it fails assume that the file is fucked and start over
