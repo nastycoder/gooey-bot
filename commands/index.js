@@ -10,7 +10,8 @@
 
 const commands = [
   require('./ping'),
-  require('./lmgtfy')
+  require('./lmgtfy'),
+  require('./kill')
 ];
 
 module.exports = commands.reduce((all, cur) => {
