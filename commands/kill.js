@@ -28,7 +28,7 @@ function kill(msg, context){
     });
     // Write to memory and send a reply when finished
     file.writeFile(fd, JSON.stringify(memory), (error) {
-      file.close(fd, doReply());
+      file.close(fd, doReply);
     })
   }
   
