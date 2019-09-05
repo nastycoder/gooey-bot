@@ -1,7 +1,7 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const commands = require('./commands');
-const prefix = bot.user.toString(); // Use @gooey mentions as the prefix
+const prefix = '';
 
 bot.on('message', context => {
   const message = context.content.toLowerCase();
@@ -20,8 +20,7 @@ bot.on('message', context => {
 });
 
 bot.on('ready', () => {
-  // do something we're all fired up
-  // console.log('something is happening');
+  prefix = bot.user.toString(); // Use @gooey mentions as the prefix
 });
 
 bot.on('guildCreate', (guild) => {
