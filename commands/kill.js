@@ -11,11 +11,6 @@ function kill(msg, context){
   // If nobody else is mentioned in the message, quit here
   if (!mentions.length) return;
   
-  // Send a reply after everything else is done
-  function doReply() {
-    context.channel.send('You got it!');
-  };
-  
   // Increment the death counter for all mentioned members
   function apendDeaths(memory, fd) {
     // Iterate over mentioned users and increment their death counter
@@ -28,7 +23,10 @@ function kill(msg, context){
     });
     // Write to memory and send a reply when finished
     file.writeFile(fd, JSON.stringify(memory), (error) {
-      file.close(fd, doReply);
+      // Send a reply after everything else is done
+      file.close(fd, () {
+        context.channel.send('You got it!');
+      });
     })
   }
   
