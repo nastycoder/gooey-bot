@@ -4,7 +4,7 @@ const filename = '../memory/deaths.json';
 function kill(msg, context){
 
   // Filter out bot mentions
-  const mentions = context.mentions.users.filter((user) => !bot.user);
+  const mentions = context.mentions.users.filter((user) => !user.bot);
   
   // If nobody else is mentioned in the message, quit here
   if (!mentions.length) return;
