@@ -20,7 +20,7 @@ bot.on('message', context => {
 });
 
 bot.on('ready', () => {
-  prefix = bot.user.toString(); // Use @gooey mentions as the prefix
+  prefix = '${bot.user}'; // Use @gooey mentions as the prefix
 });
 
 bot.on('guildCreate', (guild) => {
