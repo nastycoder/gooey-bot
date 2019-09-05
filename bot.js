@@ -1,27 +1,27 @@
 const Discord = require('discord.js');
 const bot = new Discord.Client();
 const commands = require('./commands');
-const prefix = '';
+// const prefix = '';
 
 bot.on('message', context => {
   const message = context.content.toLowerCase();
   
+  let prefix = bot.user.toString(); // bot responds to @mentions
+    
   // If they aren't talking to us, just bail.
   if (!message.startsWith(prefix)) {
     return;
   }
   
-  const msg = message.split(' ');
-  const com = msg.shift().replace(prefix, '');
+  const msg = message.substr(prefix.length).trim().split(' ');
+  const com = msg.shift();
 
   if (!!commands[com]) {
     commands[com](msg, context);
   }
 });
 
-bot.on('ready', () => {
-  //prefix = '${bot.user}'; // Use @gooey mentions as the prefix
-});
+bot.on('ready', () => {});
 
 bot.on('guildCreate', (guild) => {
   // do some guildy stuff
