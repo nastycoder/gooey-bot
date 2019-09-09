@@ -3,7 +3,7 @@ const Discord = require('discord.js');
 const filename = 'memory/deaths.json'
 
 function printer(context) {
-  return fs.readFile(`memory/${filename}.json`).then(fd => {
+  return fs.readFile(filename).then(fd => {
     let embed = new Discord.RichEmbed();
 
     let data = JSON.parse(fd);
