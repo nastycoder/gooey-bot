@@ -9,7 +9,7 @@ async function show(msg, context) {
           context.channel.send(`Can't see to figure out how to print ${printer}.`);
         });
       } else {
-        context.channel.send(`No known printer by the name of ${printer}.`);
+        return context.channel.send(`No known printer by the name of ${printer}.`);
       }
     })
   );
