@@ -1,15 +1,16 @@
-const fs = require('../tools/fs');
+const printers = require('printers');
 
 async function show(msg, context) {
   return Promise.all(
-    msg.map((filename) => {
-      return fs.readFile(`memory/${filename}.json`).then(fd => {
-        context.channel.send(`
-        \`\`\`json
-        ${fd}
-        \`\`\`
-        `)
-      }).catch(console.error);
+    msg.map((printer) => {
+      if (printers[printer]) {
+        return printers[printer](context).catch(e => {
+          console.error(e);
+          context.channel.send(`Can't see to figure out how to print ${printer}.`);
+        });
+      } else {
+        context.channel.send(`No known printer by the name of ${printer}.`);
+      }
     })
   );
 }
