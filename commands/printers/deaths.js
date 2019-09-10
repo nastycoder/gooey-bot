@@ -11,7 +11,7 @@ function printer(context) {
       embed.addField(data[id].name, data[id].deaths);
     }
 
-    embed.title(`Current Death Counts`);
+    embed.setTitle(`Current Death Counts`);
 
     return context.channel.send(embed);
   });

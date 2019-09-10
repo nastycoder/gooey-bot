@@ -1,6 +1,6 @@
 const fs = require('../tools/fs');
+const DeathPrinter = require('./printers/deaths');
 const filename = 'memory/deaths.json';
-const Discord = require('discord.js');
 
 function merge(og, knew) {
   for (id in knew) {
@@ -36,17 +36,9 @@ async function kill(_, context){
 
   // Write to memory and send a reply when finished
   return fs.writeFile(filename, JSON.stringify(stored)).then(() => {
-    const embed = new Discord.RichEmbed().setTitle(`You got it!`);
+    context.channel.send(`You got it!`);
 
-    embed.addField(
-      `Death Totals`, 
-      Object.keys(stored).reduce( (acc, cur) => {
-        const data = stored[cur];
-        return `${acc}${data.name} : ${data.deaths}\n`
-      }, '')
-    );
-    // Send a reply after everything else is done
-    context.channel.send(embed);
+    return DeathPrinter.run(context);
   }).catch((e) => {
     console.error(e);
     context.channel.send('Something went wrong boss.');

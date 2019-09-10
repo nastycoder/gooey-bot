@@ -1,4 +1,4 @@
-const printers = require('printers');
+const printers = require('./printers');
 
 async function show(msg, context) {
   return Promise.all(
