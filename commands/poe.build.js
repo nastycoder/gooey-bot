@@ -18,7 +18,7 @@ async function poebuild(msg, context) {
   let color = getRandom(ascendancy.skill_colors);
   let skill = getRandom(MANUAL_DATA.active_skills[color]);
 
-  return context.channel.send(`${klass.name} / ${ascendancy.name} / ${color} / ${skill}`);
+  return context.channel.send(`${klass.name} / ${ascendancy.name} / ${skill}`);
 }
 
 function getRandom(arr) {
