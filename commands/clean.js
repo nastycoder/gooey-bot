@@ -5,7 +5,6 @@ async function clean(msg, context) {
   if (context.guild.ownerID !== context.author.id) {
     return context.channel.send('Not gonna do that!');
   }
-  
   return Promise.all(
     msg.map((file) => {
       return fs.unlink(`./memory/${file}.json`);

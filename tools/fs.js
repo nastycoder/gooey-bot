@@ -1,11 +1,11 @@
 // Simple Wrapper to add promises to the core fs module
 const ogfs = require('fs');
-
+const path = require('path');
 
 class fs {
   async readFile(filename) {
     return new Promise( (res, rej) => {
-      ogfs.readFile(filename, (err, fd) => {
+      ogfs.readFile(path.resolve(__dirname, '../', filename), (err, fd) => {
         if (err) {
           rej(err);
         } else {
@@ -17,7 +17,7 @@ class fs {
 
   async writeFile(filename, data) {
     return new Promise( (res, rej) => {
-      ogfs.writeFile(filename, data, (err, fd) => {
+      ogfs.writeFile(path.resolve(__dirname, '../', filename), data, (err, fd) => {
         if (err) {
           rej(err);
         } else {
@@ -29,7 +29,7 @@ class fs {
 
   async unlink(filename) {
     return new Promise( (res, rej) => {
-      ogfs.unlink(filename, ( _ ) => {
+      ogfs.unlink(path.resolve(__dirname, '../', filename), ( _ ) => {
         // if this fails we don't care
         res(true);
       })
