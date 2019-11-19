@@ -2,8 +2,8 @@
  * All Commands are expected to export `key` and `run` values.
  * `key` should be the string the is expected to enter.
  * `run` should be the function excuting the command.
- *      - This should expect 2 arguments the fist being and Array 
- *        of words entered after the command and the second being 
+ *      - This should expect 2 arguments the fist being and Array
+ *        of words entered after the command and the second being
  *        the original message object (or context as it's referred).
  */
 
@@ -13,7 +13,8 @@ const commands = [
   require('./ping'),
   require('./lmgtfy'),
   require('./kill'),
-  require('./show')
+  require('./show'),
+  require('./poe.build')
 ];
 
 module.exports = commands.reduce((all, cur) => {

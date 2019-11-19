@@ -5,14 +5,14 @@ const commands = require('./commands');
 
 bot.on('message', context => {
   const message = context.content.toLowerCase();
-  
+
   let prefix = bot.user.toString(); // bot responds to @mentions
-    
+
   // If they aren't talking to us, just bail.
   if (!message.startsWith(prefix)) {
     return;
   }
-  
+
   const msg = message.replace(prefix, '').trim().split(' ');
   const com = msg.shift();
 

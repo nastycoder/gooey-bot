@@ -1,0 +1,87 @@
+{
+  "info" : "This data is manually harvested from poedb and should be updated before each league.",
+  "active_skills" : {
+    "red" : ["Leap Slam", "Sweep", "Ground Slam", "Vaal Ground Slam", "Cleave", "Shield Charge", "Enduring Cry", "Immortal Call", "Infernal Blow", "Glacial Hammer", "Vaal Glacial Hammer", "Warlord's Mark", "Punishment", "Heavy Strike", "Dominating Blow", "Molten Shell", "Vaal Molten Shell", "Vitality", "Determination", "Anger", "Shockwave Totem", "Rejuvenation Totem", "Decoy Totem", "Devouring Totem", "Holy Flame Totem", "Searing Bond", "Animate Guardian", "Purity of Fire", "Vaal Impurity of Fire", "Molten Strike", "Herald of Ash", "Herald of Purity", "Reckoning", "Static Strike", "Vengeance", "Summon Flame Golem", "Ice Crash", "Rallying Cry", "Abyssal Cry", "Vigilant Strike", "Summon Stone Golem", "Earthquake", "Ancestral Protector", "Ancestral Warchief", "Sunder", "Tectonic Slam", "Vulnerability", "Vaal Earthquake", "Vaal Ancestral Warchief", "Consecrated Path", "Smite", "War Banner", "Dread Banner", "Steelskin", "Bladestorm", "Blood and Sand", "Berserk", "Perforate", "Chain Hook", "Flesh and Stone", "Pride"],
+    "blue" : ["Fireball", "Vaal Fireball", "Ice Nova", "Vaal Ice Nova", "Cold Snap", "Vaal Cold Snap", "Raise Zombie", "Righteous Fire", "Vaal Righteous Fire", "Discharge", "Spark", "Vaal Spark", "Ice Spear", "Raise Spectre", "Frost Wall", "Freezing Pulse", "Shock Nova", "Elemental Weakness", "Enfeeble", "Assassin's Mark", "Despair", "Lightning Warp", "Summon Skeletons", "Vaal Summon Skeletons", "Firestorm", "Tempest Shield", "Power Siphon", "Vaal Power Siphon", "Purity of Elements", "Discipline", "Vaal Discipline", "Wrath", "Clarity", "Vaal Clarity", "Icicle Mine", "Conversion Trap", "Arctic Breath", "Arc", "Vaal Arc", "Flammability", "Frostbite", "Conductivity", "Storm Burst", "Incinerate", "Lightning Trap", "Vaal Lightning Trap", "Purity of Lightning", "Vaal Impurity of Lightning", "Storm Call", "Vaal Storm Call", "Flameblast", "Vaal Flameblast", "Ball Lightning", "Summon Raging Spirit", "Flame Surge", "Flesh Offering", "Bone Offering", "Spirit Offering", "Glacial Cascade", "Convocation", "Pyroclast Mine", "Herald of Thunder", "Lightning Tendrils", "Lightning Tendrils", "Kinetic Blast", "Summon Chaos Golem", "Summon Lightning Golem", "Flame Dash", "Magma Orb", "Frost Bomb", "Orb of Storms", "Contagion", "Wither", "Blight", "Essence Drain", "Frostbolt", "Vortex", "Dark Pact", "Scorching Ray", "Bodyswap", "Siphoning Trap", "Lightning Spire Trap", "Vaal Blight", "Summon Holy Relic", "Winter Orb", "Storm Brand", "Armageddon Brand", "Brand Recall", "Purifying Flame", "Soulrend", "Bane", "Wave of Conviction", "Zealotry", "Divine Ire", "Malevolence", "Frostblink", "Summon Carrion Golem", "Stormblast Mine", "Summon Skitterbots"],
+    "green" : ["Charged Dash", "Blade Flurry", "Double Strike", "Vaal Double Strike", "Lacerate", "Elemental Hit", "Dual Strike", "Whirling Blades", "Frenzy", "Detonate Dead", "Vaal Detonate Dead", "Volatile Dead", "Unearth", "Split Arrow", "Caustic Arrow", "Blood Rage", "Flicker Strike", "Viper Strike", "Phase Run", "Explosive Arrow", "Temporal Chains", "Projectile Weakness", "Rain of Arrows", "Vaal Rain of Arrows", "Lightning Strike", "Vaal Lightning Strike", "Puncture", "Lightning Arrow", "Haste", "Vaal Haste", "Grace", "Vaal Grace", "Hatred", "Burning Arrow", "Vaal Burning Arrow", "Bear Trap", "Fire Trap", "Ethereal Knives", "Ice Shot", "Arctic Armour", "Cyclone", "Vaal Cyclone", "Reave", "Vaal Reave", "Smoke Mine", "Spectral Shield Throw", "Spectral Throw", "Vaal Spectral Throw", "Animate Weapon", "Purity of Ice", "Vaal Impurity of Ice", "Barrage", "Desecrate", "Tornado Shot", "Herald of Ice", "Herald of Agony", "Poacher's Mark", "Blink Arrow", "Mirror Arrow", "Riposte", "Summon Ice Golem", "Frost Blades", "Wild Strike", "Ice Trap", "Blast Rain", "Shrapnel Shot", "Bladefall", "Blade Vortex", "Vaal Blade Vortex", "Siege Ballista", "Cremation", "Explosive Trap", "Flamethrower Trap", "Seismic Trap", "Scourge Arrow", "Toxic Rain", "Lancing Steel", "Shattering Steel", "Dash", "Precision", "Cobra Lash", "Withering Step", "Plague Bearer", "Pestilent Strike", "Venom Gyre"]
+  },
+  "classes" : [{
+    "name": "Marauder",
+    "ascendancies" : [{
+      "name" : "Juggernaut",
+      "skill_colors" : ["red"]
+    }, {
+      "name" : "Berserker",
+      "skill_colors": ["red"]
+    }, {
+      "name" : "Cheiftain",
+      "skill_colors" : ["red", "blue"]
+    }]
+  }, {
+    "name" : "Ranger",
+    "ascendancies" : [{
+      "name" : "Raider",
+      "skill_colors" : ["green", "red"]
+    }, {
+      "name" : "Deadeye",
+      "skill_colors" : ["green"]
+    }, {
+      "name" : "Pathfinder",
+      "skill_colors" : ["green", "blue"]
+    }]
+  }, {
+    "name" : "Witch",
+    "ascendancies": [{
+      "name" : "Occultist",
+      "skill_colors" : ["blue", "green"]
+    }, {
+      "name" : "Elementalist",
+      "skill_colors" : ["blue"]
+    }, {
+      "name" : "Necromancer",
+      "skill_colors" : ["blue"]
+    }]
+  }, {
+    "name" : "Templar",
+    "ascendancies" : [{
+      "name" : "Inquisitor",
+      "skill_colors" : ["blue", "green", "red"]
+    }, {
+      "name" : "Hierophant",
+      "skill_colors" : ["blue"]
+    }, {
+      "name" : "Guardian",
+      "skill_colors" : ["blue", "red"]
+    }]
+  }, {
+    "name" : "Shadow",
+    "ascendancies" : [{
+      "name" : "Assassin",
+      "skill_colors" : ["blue", "green"]
+    }, {
+      "name" : "Trickster",
+      "skill_colors" : ["blue", "green"]
+    }, {
+      "name" : "Saboteur",
+      "skill_colors" : ["blue", "green"]
+    }]
+  }, {
+    "name" : "Duelist",
+    "ascendancies" : [{
+      "name" : "Slayer",
+      "skill_colors" : ["red", "green"]
+    }, {
+      "name" : "Gladiator",
+      "skill_colors" : ["red", "green"]
+    }, {
+      "name" : "Champion",
+      "skill_colors" : ["red", "green"]
+    }]
+  }, {
+    "name" : "Scion",
+    "ascendancies" : [{
+      "name" : "Ascendant",
+      "skill_colors" : ["red", "blue", "green"]
+    }]
+  }]
+}
