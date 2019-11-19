@@ -22,7 +22,7 @@ async function poebuild(msg, context) {
 }
 
 function getRandom(arr) {
-  return arr[Math.floor(Math.random() * (arr.length + 1))];
+  return arr[Math.floor(Math.random() * (arr.length))];
 }
 
 exports.run = poebuild;
