@@ -14,7 +14,7 @@ bot.on('message', context => {
                 .replace(`<@${bot.user.id}>`, '')
                 .trim()
                 .split(' ');
-  console.log(msg)
+
   const com = msg.shift();
 
   if (!!commands[com]) {
