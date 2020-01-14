@@ -4,16 +4,15 @@ const commands = require('./commands');
 // const prefix = '';
 
 bot.on('message', context => {
-  const message = context.content.toLowerCase();
-
-  let prefix = bot.user.toString(); // bot responds to @mentions
-
-  // If they aren't talking to us, just bail.
-  if (!message.startsWith(prefix)) {
+  if (!context.mentions.users.has(bot.user.id)) {
     return;
   }
 
-  const msg = message.replace(prefix, '').trim().split(' ');
+  const msg = context.content.toLowerCase()
+                .replace(`<@!${bot.user.id}>`, '')
+                .trim()
+                .split(' ');
+
   const com = msg.shift();
 
   if (!!commands[com]) {
